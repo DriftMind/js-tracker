@@ -82,9 +82,10 @@ module.exports = function (config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  });
 
   if (process.env.TRAVIS) {
     config.browsers = ['Chrome_travis_ci'];
+    config.singleRun = true;
   }
 }
